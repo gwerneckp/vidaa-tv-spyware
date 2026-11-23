@@ -1,0 +1,22 @@
+# Privacy-related keys from the TV's settings registry, /var/local/kilby/kireg-kilby0.dat
+# (plain-text tree; paths joined with dots). Read on 2026-11-23. Identifier redacted.
+
+biz.sl2.acr.switch = 1                     # viewing tracking (ACR) on
+biz.sl2.acr.recommendation = 1
+biz.sl2.acr.anonymize = 1
+biz.sl2.acr.aiaqpq = 1
+biz.sl2.acr.picture.adapt = 0
+biz.sl2.acr.sound.adapt = 0
+biz.sl2.acrai.recommendation = 0
+
+biz.sl2.systemctrl.notification.adtarget = 0
+biz.sl2.systemctrl.notification.adtarget.id = <REDACTED advertising ID, UUID format>
+biz.sl2.systemctrl.notification.advertising = 1
+
+biz.sl2.avs.enable = 0                     # Alexa not set up
+biz.sl2.avs.farfieldPower = 1              # hands-free microphone powered
+biz.sl2.avs.farfieldMute = 0
+biz.sl2.avs.farfieldMutePhysical = 0
+biz.sl2.avs.farfieldPrivacyLedIndMute = 0
+biz.sl2.vidaavoice.farfieldMute = 1        # VIDAA Voice hands-free muted
+biz.sl2.voice.working = 1

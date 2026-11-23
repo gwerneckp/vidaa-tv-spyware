@@ -1,0 +1,5 @@
+%s<%d>: mic pcm pipe %d bytes %d%% ref pcm pipe %d bytes %d%%
+Mic switch
+[1;31m%s<%d>: dispatch mic data fail
+[1;31m%s<%d>: read mic pcm and timestamp fail
+sync_mic_ref

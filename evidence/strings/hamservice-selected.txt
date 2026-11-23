@@ -1,0 +1,59 @@
+","tv_app_name":"
+"Tremor",
+"acr-registration-url":                  { "p": "acr.registrationUrl", "t": "string", "e": "NEXN_ACR_REGISTRATION_URL", "d": "ACR registration URL", "default": "https://acr.unruly.co/v2/device" },
+"acr-supported-url":                     { "p": "acr.supportedUrl", "t": "string", "e": "NEXN_ACR_SUPPORTED_URL", "d": "ACR supported URL", "default": "https://acr.unruly.co/v2/inmarket" },
+"fp-code":                               {  "p": "fp.code","t": "string","e": "NEXN_FP_CODE","d": "Fingerprint message code (WP1L|WP1R,WP1U). Should be WP1U for devices." },
+%s:%d:%s(): [ACR]Initing audio record failed.
+%s:%d:%s(): [ACR]Initing audio record succeeds.
+%s:%d:%s(): [ACR]audio rate is:%d
+%s:%d:%s(): [ACR]bEnable:%d, bKillSwitch:%d
+%s:%d:%s(): [ACR]hamservice begin registration.
+/builds/acr/libnexn/src/nexxen/nexxen_sdk.c
+acr_update_audio_source
+acr_update_audio_source: %s
+acr_update_audio_source: Converting to JSON: %s
+acr_update_audio_source: Exiting
+acr_update_audio_source: JSON buffer too small.
+acr_update_audio_source: app_name: %s, source: %s, tuner_channel: %s, hdmi_device: %s
+acr_update_audio_source: source_info is NULL.
+acr_update_audio_source_from_json
+acr_update_audio_source_from_json: ACR system state is not active.
+acr_update_audio_source_from_json: Exiting
+acr_update_audio_source_from_json: Failed to parse JSON string.
+acr_update_audio_source_from_json: Incorrect internal state, likely due to prior malloc failure.
+acr_update_audio_source_from_json: JSON string is NULL.
+https://acr.unruly.co
+nexxen_sdk_mqtt_connection_lost
+nexxen_sdk_mqtt_connection_restored
+tv_app_name
+{"tv_app_name":"%s","tv_source":"%s","tv_tuner_channel":"%s","tv_hdmi_device":"%s"}
+/home/ubuntu/dt-tremor-sdk/third-party/fftw-3.3.10/kernel/alloc.c
+/home/ubuntu/dt-tremor-sdk/third-party/fftw-3.3.10/kernel/planner.c
+Calculated samples_per_fingerprint: %zu (sample_rate=%d, seconds for FP=%d)
+EVP_PKEY_encrypt
+EVP_aes_128_gcm
+Failed to base64 encode encrypted text.
+NEXN_SERVER_PUBKEY
+NEXN_SERVER_PUBKEY_LEN
+Unknown get_features_function: %s, keeping default
+Unknown lsh_bucket_hash_function: %s; keeping default
+WHSPR_lsh_bucket_hash_function_enum_from_name
+WHSPR_lsh_bucket_hash_function_enum_from_value
+WHSPR_lsh_bucket_hash_function_from_enum
+WHSPR_lsh_bucket_hash_function_names
+WHSPR_lsh_bucket_hash_functions
+energy_delta_feature_bin_count should be <= 64, setting to 14
+energy_flux_feature_bin_count should be <= 64, setting to 0
+energy_rate_feature_bin_count should be <= 64, setting to 0
+fp_settings:energy_delta_feature_bin_count
+fp_settings:energy_flux_feature_bin_count
+fp_settings:energy_rate_feature_bin_count
+fp_settings:get_features_function
+fp_settings:lsh_bucket_hash_function
+lsh_bucket_hash_function_from_name
+samples_per_fingerprint not set, using default: %zu
+whspr_get_features_function_enum_from_name
+whspr_get_features_function_enum_from_value
+whspr_get_features_function_from_name
+whspr_get_features_function_names
+whspr_get_features_functions

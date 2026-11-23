@@ -1,0 +1,15 @@
+# Relevant processes (ps; RSS = memory in use). TV idle on the home screen.
+ 1872 voicesdk 3692 /basic/bin/voicesdk_server
+ 2071 netflix  103m /3rd/Netflix/netflix --no-resources --resources=cpu --resources=network -Q iid=<redacted>&ad
+ 2456 UhisMdh  4360 /usr/local/bin/mdharvester -d3000
+ 2810 372      9368 /opt/iot/bin/iot_service
+ 2864 UhisPhoe  31m /APPS/pkgs/tv.vidaa.app.phoenix/current/bin/phoenix --jitless --max-semi-space-size=3 --no
+ 2867 356      7832 /opt/airplay/bin/airplay_bridge
+ 2895 385      8184 /usr/local/bin/capture
+ 2928 372       27m /opt/iot/matter/bin/matter-tv-app --secured-commissioner-port 5552 --capabilities 4 --wifi
+ 2936 384       10m /opt/karaoke/bin/karaoke
+ 3456 360       25m /3rd/airplay/airplaydemo
+ 3820 UhisHam   11m /usr/local/bin/HamService
+ 5324 UhisAvs   43m /opt/avsservice/bin/AlexaNativeAppService
+ 5769 amazon   278m /3rd/amazon/bin/ignition [amazon_ignition --launch-in-background
+ 7031 UhisAvs   21m /opt/avsservice/bin/voiceservice

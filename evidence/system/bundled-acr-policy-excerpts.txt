@@ -1,0 +1,21 @@
+# Excerpts from the privacy policy text bundled with HamService on the TV:
+# /var/local/hamservice/eng_gbr.json, key "privacy_policy_text" (file dated 2026-06-05).
+# The text is Alphonso Inc.'s "EU Smart TV Privacy Policy, effective January 1, 2020".
+# privacy_policy_url in the same file: https://alphonso.tv/privacy/
+
+> Video AI refers to Alphonso’s ability to collect and analyze publicly available content (TV shows, advertisements, movies, video games) being played on or through a TV, including Alphonso’s automatic content recognition (ACR) collection technology.
+
+> The Service only collects data from your device if you have agreed to participate.
+
+> If you agree, the Service may collect video and/or audio information from what you are watching through your device, regardless of the source of the information (e.g., TV, video and audio streaming devices, set-top boxes, etc.) in order to determine the programs you have watched and the advertisements you have seen.
+
+> While the Service does collect device identifiers (such as IP Address) which are associated with your Viewing Data, your Viewing Data is never associated, in any of the materials we provide to our Data Partners, with your name, postal address, or email.
+
+> Data Partners receive Viewing Data which may include device identifiers.
+
+> They are able to use the data to create products that will be sold or otherwise shared with Clients.
+
+> Alphonso and its Service Providers use Viewing Data for a variety of purposes, including to:
+* Deliver marketing and advertising materials on our behalf, and for other third parties, that we believe are relevant to you, both to your Smart TV as well as to other devices that are connected to your Smart TV, either directly or through wireless connections;
+
+> * Offer recommendations to you about programing content on your TV and other devices we believe you may enjoy;

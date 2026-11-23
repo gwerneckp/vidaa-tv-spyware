@@ -1,0 +1,17 @@
+%s+eventcode%s+appid%s+appname%s+eventtime%s+errcode%s
+%s:%d:%s():  mac: %s.
+%s:%d:%s(): ****** Success to Get Log Report Policy ******
+%s:%d:%s(): ****** Success to Send Upload Log Request ******
+%s:%d:%s(): Can not post uploadFunctionSwitch.url is %s, data is %s!
+%s:%d:%s(): Get DeviceSerial [%s], FeatureCode [%s], DeviceId [%s] .
+%s:%d:%s(): Log Upload : Finally upload_serviceUrl = [%s] , upload_serviceUrlHttps = [%s].
+%s:%d:%s(): Log Upload : Origin upload_serviceUrl = [%s] with length [%d].
+%s:%d:%s(): Not Obtain Report Policy, Default Collect Log.
+%s:%d:%s(): can not uploadFunctionSwitch().
+%s:%d:%s(): need for uploadFunctionSwitch().
+%s:%d:%s(): no need for uploadFunctionSwitch().
+%s:%d:%s(): no network for uploadFunctionSwitch().
+%s:%d:%s(): post uploadFunctionSwitch success.url is %s, data is %s!
+%s:%d:%s(): self defined log upload : Origin upload_serviceUrl = [%s] with length [%d].
+_ZN3lrt13ReportRequest20uploadFunctionSwitchEv
+uploadFunctionSwitch

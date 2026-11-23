@@ -1,0 +1,23 @@
+total 4
+drwxrwx--x  2 UhisHam UGhisHam  160 2026-11-21 20:26 .
+drwxrwxrwx 24 root    system   2300 2026-11-23 12:00 ..
+-rw-rw----  1 UhisHam UGhisHam    0 2026-11-21 20:26 MyAppConfigUpdateCB.txt
+-rw-rw----  1 UhisHam UGhisHam    0 2026-11-21 20:26 myInitCB.txt
+-rw-rw----  1 UhisHam UGhisHam    0 2026-11-21 20:26 myMatchCB.txt
+-rw-rw----  1 UhisHam UGhisHam    0 2026-11-21 20:26 myRecommendationCB.txt
+-rw-rw----  1 UhisHam UGhisHam    0 2026-11-21 20:26 myResetAdidCB.txt
+-rw-rw-r--  1 UhisHam UGhisHam   71 2026-11-23 11:19 tremor_response.txt
+
+# /tmp/acr/tremor_response.txt
+{"isMatch":true,"genre":{"ACR_CAT1":"Series","ACR_CAT2":"Documentary"}}
+
+total 180
+drwx------  2 UhisHam UGhisHam  4096 2026-10-27 22:15 .
+drwxrwxrwx 36 root    root      4096 2026-11-21 20:26 ..
+-rw-r-----  1 UhisHam UGhisHam    13 2026-11-23 11:44 acr_day_report_count.txt
+-rw-------  1 UhisHam UGhisHam 32638 2026-06-05 11:49 deu_deu.json
+-rw-------  1 UhisHam UGhisHam 27919 2026-06-05 11:49 eng_gbr.json
+-rw-------  1 UhisHam UGhisHam 34757 2026-06-05 11:49 fra_fra.json
+-rw-------  1 UhisHam UGhisHam 32882 2026-06-05 11:49 ita_ita.json
+-rw-------  1 UhisHam UGhisHam    76 2026-06-05 11:49 log4cplus.properties
+-rw-------  1 UhisHam UGhisHam 32131 2026-06-05 11:49 spa_esp.json

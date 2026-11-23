@@ -1,0 +1,16 @@
+# Advertising ID generation in the built-in ads module (minified JavaScript, short excerpt).
+# File: /APPS/pkgs/tv.vidaa.app.operationui/current/apps/ads/js/app.js
+
+function _n(){var e,t,r,n=(e=[Lt.DEVICE_ID,Lt.COUNTRY,Lt.BRAND,Lt.LANG,C(),E(),qe.getMac(),gs()].join("_"),r=[(t=u()(e).toString()).substr(0,8),t.substr(8,4),t.substr(12,4),t.substr(16,4),t.substr(20)].join("-"),Et.info("_genrateIFA",e,r),r);be.setAdId(n),Et.always("newIfa:",n)}function yn(){return Dt.ADID||"00000000-0000-0000-0000-0000000000
+
+
+# Ad-related names found in the same file:
+"AD_ID_RESET"
+"UniversalAdId"
+"VASTAdTagURI"
+"adIdReset"
+"vastTrack"
+appStartAds
+bannerAdsGetten
+kilby.sl2.i32.system.adtarget.enable
+vastTrack

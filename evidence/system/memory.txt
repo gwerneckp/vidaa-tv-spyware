@@ -1,0 +1,51 @@
+# Memory snapshot, 2026-11-23 ~13:15 UTC, TV on the home screen (Netflix/Prime not opened).
+
+MemTotal:        2681216 kB
+MemFree:          218840 kB
+MemAvailable:     600984 kB
+SwapTotal:       1607676 kB
+SwapFree:        1552248 kB
+
+# Resident memory per process (VmRSS), largest first
+514060 kB  phoenix   <- Nuvio torrent engine (my own install, see README section 6)
+251484 kB  ignition
+229244 kB  SystemUI
+173044 kB  mediamain
+150320 kB  browser
+105996 kB  netflix
+73048 kB  biz
+69372 kB  zenixservicewor
+56580 kB  tvmain
+53156 kB  chassis
+42972 kB  AlexaNativeAppS
+42020 kB  mi_daemon_sys.b
+31476 kB  phoenix
+31304 kB  phoenix
+29616 kB  phoenix
+28456 kB  matter-tv-app
+28252 kB  sysmain
+26256 kB  airplaydemo
+22808 kB  app_man
+22596 kB  phoenix
+22392 kB  systemserver
+22032 kB  voiceservice
+21952 kB  zenixservicewor
+21908 kB  nfxdevsplash
+19940 kB  phoenix
+14440 kB  avmain
+13356 kB  hi_logreport_se
+11120 kB  HamService
+10796 kB  karaoke
+10132 kB  apmbond
+
+# Browser launch flags related to memory
+--memory-pressure-thresholds-mb=200,450
+--source-buffer-memory-limit-mb=80,5
+--override-low-memory-device-threshold-mb=1600
+--enable-precise-memory-info
+--enable-show-prompt-page-if-memory-high
+--log-report-memory-threshold=gpu_kb:409600,v8_mb:300,total_mb:900,renderProcess_mb:800
+--v8-memory-report
+
+# Browser renderer process (zenixservicework, pid 4730) flags related to memory
+/APPS/pkgs/tv.vidaa.app.browser/CHA/bin/zenixservicework --type=zygote --disable-in-process-stack-traces --no-sandbox --ppapi-in-process --native-window-size-width-height=1920,1080 --override-low-memory-device-threshold-mb=1600 --resources-dir-path=/APPS/pkgs/tv.vidaa.res.odin/current --enable-low-end-device-mode --disable-rgba-4444-textures

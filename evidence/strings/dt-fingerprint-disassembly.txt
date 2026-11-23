@@ -1,0 +1,110 @@
+# Disassembly of DT::acr_processor::audio_buffer_to_fingerprint(unsigned char*) in HamService
+# (llvm-objdump --triple=thumbv7-linux-gnueabihf, address 0x8f7d0, 216 bytes). Comments added.
+
+   8f7a8: edd1 7a01    	vldr	s15, [r1, #4]
+   8f7ac: ed91 7a00    	vldr	s14, [r1]
+   8f7b0: ee67 7aa7    	vmul.f32	s15, s15, s15
+   8f7b4: eee7 7a07    	<unknown>
+   8f7b8: eef5 7a40    	vcmp.f32	s15, #0
+   8f7bc: eef1 fa10    	vmrs	APSR_nzcv, fpscr
+   8f7c0: d402         	bmi	0x8f7c8 <_ZN2DT13acr_processor7abs_fftEPf+0x20> @ imm = #0x4
+   8f7c2: eeb1 0ae7    	vsqrt.f32	s0, s15
+   8f7c6: 4770         	bx	lr
+   8f7c8: eeb0 0a67    	vmov.f32	s0, s15
+   8f7cc: f7b4 bd5c    	b.w	0x44288 <sprintf@plt+0xc> @ imm = #-0x4b548
+
+0008f7d0 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh>:
+   8f7d0: e92d 4ff8    	push.w	{r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   8f7d4: f04f 0800    	mov.w	r8, #0x0
+   8f7d8: ed2d 8b06    	vpush	{d8, d9, d10}
+   8f7dc: 4606         	mov	r6, r0
+   8f7de: 468a         	mov	r10, r1
+   8f7e0: f44f 7448    	mov.w	r4, #0x320   ; start at FFT bin 100 (0x320 / 8 bytes per complex bin)
+   8f7e4: eddf 8a2f    	vldr	s17, [pc, #188]         @ 0x8f8a4 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0xd4>
+   8f7e8: 2704         	movs	r7, #0x4   ; first band ends after r7+1 = 5 bins
+   8f7ea: 6980         	ldr	r0, [r0, #0x18]
+   8f7ec: 46c1         	mov	r9, r8
+   8f7ee: eeb5 ab00    	vmov.f64	d10, #2.500000e-01   ; weight of the current band in the running average
+   8f7f2: 4645         	mov	r5, r8
+   8f7f4: eeb6 9b08    	vmov.f64	d9, #7.500000e-01   ; weight of the previous running average
+   8f7f8: f04f 0b01    	mov.w	r11, #0x1
+   8f7fc: eeb0 8a68    	vmov.f32	s16, s17
+   8f800: f004 fb6c    	bl	0x93edc <fftwf_execute> @ imm = #0x46d8   ; FFT of the 1.024 s buffer
+   8f804: e004         	b	0x8f810 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0x40> @ imm = #0x8
+   8f806: 3408         	adds	r4, #0x8
+   8f808: f647 13e8    	movw	r3, #0x79e8   ; stop at FFT bin 3901
+   8f80c: 429c         	cmp	r4, r3
+   8f80e: d03d         	beq	0x8f88c <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0xbc> @ imm = #0x7a
+   8f810: 6971         	ldr	r1, [r6, #0x14]
+   8f812: 4630         	mov	r0, r6
+   8f814: 4421         	add	r1, r4
+   8f816: f7ff ffc7    	bl	0x8f7a8 <_ZN2DT13acr_processor7abs_fftEPf> @ imm = #-0x72   ; |X[k]| = sqrt(re^2 + im^2)
+   8f81a: 42bd         	cmp	r5, r7
+   8f81c: ee38 8a00    	vadd.f32	s16, s16, s0
+   8f820: f105 0501    	add.w	r5, r5, #0x1
+   8f824: d1ef         	bne	0x8f806 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0x36> @ imm = #-0x22
+   8f826: ea4f 01d8    	lsr.w	r1, r8, #0x3
+   8f82a: f008 0307    	and	r3, r8, #0x7
+   8f82e: 464d         	mov	r5, r9
+   8f830: 3701         	adds	r7, #0x1   ; next band is one bin wider
+   8f832: f1b9 0f00    	cmp.w	r9, #0x0
+   8f836: d02d         	beq	0x8f894 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0xc4> @ imm = #0x5a
+   8f838: eef7 1ac8    	vcvt.f64.f32	d17, s16
+   8f83c: f1c3 0207    	rsb.w	r2, r3, #0x7
+   8f840: eef7 0ae8    	vcvt.f64.f32	d16, s17
+   8f844: fa0b f202    	lsl.w	r2, r11, r2
+   8f848: f108 0801    	add.w	r8, r8, #0x1
+   8f84c: 4613         	mov	r3, r2
+   8f84e: 2500         	movs	r5, #0x0
+   8f850: ee61 1b8a    	vmul.f64	d17, d17, d10
+   8f854: eee0 1b89    	<unknown>
+   8f858: eef7 8be1    	vcvt.f32.f64	s17, d17
+   8f85c: ee38 8a68    	vsub.f32	s16, s16, s17   ; band - running average
+   8f860: eeb5 8ac0    	vcmpe.f32	s16, #0
+   8f864: eef1 fa10    	vmrs	APSR_nzcv, fpscr
+   8f868: ed9f 8a0e    	vldr	s16, [pc, #56]          @ 0x8f8a4 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0xd4>
+   8f86c: bfcb         	itete	gt
+   8f86e: f81a 3001    	ldrbgt.w	r3, [r10, r1]
+   8f872: f81a 2001    	ldrble.w	r2, [r10, r1]
+   8f876: 431a         	orrgt	r2, r3
+   8f878: ea22 0303    	bicle.w	r3, r2, r3
+   8f87c: bfcc         	ite	gt
+   8f87e: f80a 2001    	strbgt.w	r2, [r10, r1]
+   8f882: f80a 3001    	strble.w	r3, [r10, r1]
+   8f886: f1b8 0f50    	cmp.w	r8, #0x50   ; stop after 80 bits
+   8f88a: d1bc         	bne	0x8f806 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0x36> @ imm = #-0x88
+   8f88c: ecbd 8b06    	vpop	{d8, d9, d10}
+   8f890: e8bd 8ff8    	pop.w	{r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   8f894: eef0 8a48    	vmov.f32	s17, s16
+   8f898: f04f 0901    	mov.w	r9, #0x1
+   8f89c: ed9f 8a01    	vldr	s16, [pc, #4]           @ 0x8f8a4 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0xd4>
+   8f8a0: e7b1         	b	0x8f806 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh+0x36> @ imm = #-0x9e
+   8f8a2: bf00         	nop
+   8f8a4: 0000         	movs	r0, r0
+   8f8a6: 0000         	movs	r0, r0
+
+0008f8a8 <_ZN2DT13acr_processor20generate_fingerprintERSt6vectorIsSaIsEESt8functionIFvPhiEE>:
+   8f8a8: b570         	push	{r4, r5, r6, lr}
+   8f8aa: b086         	sub	sp, #0x18
+   8f8ac: 4606         	mov	r6, r0
+   8f8ae: ad03         	add	r5, sp, #0xc
+   8f8b0: 4614         	mov	r4, r2
+   8f8b2: f7ff fdc5    	bl	0x8f440 <_ZN2DT13acr_processor27process_audio_bufer_to_monoERSt6vectorIsSaIsEE> @ imm = #-0x476
+   8f8b6: 4629         	mov	r1, r5
+   8f8b8: 4630         	mov	r0, r6
+   8f8ba: f7ff ff89    	bl	0x8f7d0 <_ZN2DT13acr_processor27audio_buffer_to_fingerprintEPh> @ imm = #-0xee
+   8f8be: 68a3         	ldr	r3, [r4, #0x8]
+   8f8c0: 220a         	movs	r2, #0xa
+   8f8c2: e9cd 5201    	strd	r5, r2, [sp, #4]
+   8f8c6: b133         	cbz	r3, 0x8f8d6 <_ZN2DT13acr_processor20generate_fingerprintERSt6vectorIsSaIsEESt8functionIFvPhiEE+0x2e> @ imm = #0xc
+   8f8c8: 68e3         	ldr	r3, [r4, #0xc]
+   8f8ca: aa02         	add	r2, sp, #0x8
+   8f8cc: a901         	add	r1, sp, #0x4
+   8f8ce: 4620         	mov	r0, r4
+   8f8d0: 4798         	blx	r3
+   8f8d2: b006         	add	sp, #0x18
+   8f8d4: bd70         	pop	{r4, r5, r6, pc}
+   8f8d6: f7b4 efe4    	blx	0x448a0 <_ZSt25__throw_bad_function_callv@plt> @ imm = #-0x4b038
+   8f8da: bf00         	nop
+   8f8dc: 0000         	movs	r0, r0
+   8f8de: 0000         	movs	r0, r0

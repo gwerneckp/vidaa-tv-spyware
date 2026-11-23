@@ -1,0 +1,28 @@
+2026-11-23T12:19:36.707Z relay listening
+2026-11-23T12:19:40.875Z c1 accepted, SNI=38.fp.gb.acr.unruly.co
+2026-11-23T12:19:41.009Z c1 tv2nx CONNECT mqtt-v5 flags=0xc2 clientIdLen=36 username=yes(len 36) password=yes
+2026-11-23T12:19:41.227Z c1 upstream connected to 38.fp.gb.acr.unruly.co (44.219.84.69), verified=true
+2026-11-23T12:19:41.317Z c1 nx2tv CONNACK len=21
+2026-11-23T12:19:41.320Z c1 tv2nx SUBSCRIBE len=74
+2026-11-23T12:19:41.407Z c1 nx2tv SUBACK len=4
+2026-11-23T12:19:44.089Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00005-tv2nx-publish.bin
+2026-11-23T12:19:46.821Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00006-tv2nx-publish.bin
+2026-11-23T12:19:49.510Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00007-tv2nx-publish.bin
+2026-11-23T12:19:52.236Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00008-tv2nx-publish.bin
+2026-11-23T12:19:55.001Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00009-tv2nx-publish.bin
+2026-11-23T12:19:57.691Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00010-tv2nx-publish.bin
+2026-11-23T12:20:00.397Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00011-tv2nx-publish.bin
+2026-11-23T12:20:03.097Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00012-tv2nx-publish.bin
+2026-11-23T12:20:05.825Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00013-tv2nx-publish.bin
+2026-11-23T12:20:08.166Z c1 nx2tv PUBLISH qos=0 topic=response/v1/publish_fingerprint/<device-id> payload=126B file=00014-nx2tv-publish.bin
+2026-11-23T12:20:08.496Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00015-tv2nx-publish.bin
+2026-11-23T12:20:11.193Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00016-tv2nx-publish.bin
+2026-11-23T12:20:13.899Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00017-tv2nx-publish.bin
+2026-11-23T12:20:16.596Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00018-tv2nx-publish.bin
+2026-11-23T12:20:19.339Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00019-tv2nx-publish.bin
+2026-11-23T12:20:20.521Z c1 nx2tv PUBLISH qos=0 topic=response/v1/publish_fingerprint/<device-id> payload=126B file=00020-nx2tv-publish.bin
+2026-11-23T12:20:22.072Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00021-tv2nx-publish.bin
+2026-11-23T12:20:24.801Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00022-tv2nx-publish.bin
+2026-11-23T12:20:27.548Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00023-tv2nx-publish.bin
+2026-11-23T12:20:30.243Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00024-tv2nx-publish.bin
+2026-11-23T12:20:32.961Z c1 tv2nx PUBLISH qos=0 topic=request/v1/publish_fingerprint payload=399B file=00025-tv2nx-publish.bin

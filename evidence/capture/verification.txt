@@ -1,0 +1,22 @@
+# Check that the decoded recipe (tools/recompute_fingerprint.py) reproduces the captured rows.
+# Audio: Big Buck Bunny, archive.org "big_buck_bunny_720p_surround.mp4", first 240 s,
+#        decoded with ffmpeg to 8 kHz mono (-ac 1 -ar 8000).
+# Rows recomputed every 10 ms; each captured message (10 rows x 72 bits) aligned to the best
+# start position, with a fixed spacing between its rows.
+
+row spacing   bit agreement (20 msgs x 720 bits)   alignment spread   film position of 1st msg
+220 ms        0.884                                 0.11 s             59.6 s
+250 ms        0.886                                 0.11 s             59.6 s
+260 ms        0.885                                 0.11 s             59.6 s
+270 ms        0.886                                 0.09 s             59.6 s
+300 ms        0.880                                 0.06 s             59.6 s
+
+Row-by-row alignment: mean best agreement 0.928, median spacing between rows 0.260 s,
+rows continue across message boundaries (gap to next message's first row ~0.25 s).
+
+For comparison, earlier guesses at the recipe (time-delta, frequency-delta and Philips-style
+sign bits over linear/log bands) scored at most 0.648, with alignments scattered over 16-35 s.
+That is the level of an unrelated recipe.
+
+# Bit density of the capture by byte position (9-byte rows): 0.53 0.48 0.37 0.34 0.34 0.29 0.36 0.30 0.37
+# (low-frequency bytes on the left are set more often, as the recipe predicts for typical audio).

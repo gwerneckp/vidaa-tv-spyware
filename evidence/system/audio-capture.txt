@@ -1,0 +1,35 @@
+# Sound cards
+ 0 [MStarMADNo00   ]: MStar-ALSA-Drv - MStar-MAD-No00
+                      MStar-MPEG-Audio-Decoder-No00
+ 1 [vocsndcard     ]: vocsndcard - vocsndcard
+                      vocsndcard 1
+ 2 [Loopback       ]: Loopback - Loopback
+                      Loopback 1
+ 3 [mtkaloopsndcard]: mtkaloopsndcard - mtkaloopsndcard
+                      mtkaloopsndcard 1
+
+# Capture devices in use
+/proc/asound/card0/pcm0c/sub0/status: closed
+/proc/asound/card0/pcm1c/sub0/status: closed
+/proc/asound/card0/pcm2c/sub0/status: RUNNING, owner thread 3820, process HamService (pid 3820)
+/proc/asound/card0/pcm3c/sub0/status: closed
+/proc/asound/card0/pcm4c/sub0/status: closed
+/proc/asound/card1/pcm0c/sub0/status: RUNNING, owner thread 1893, process voicesdk_server (pid 1872)
+/proc/asound/card2/pcm0c/sub0/status: closed
+/proc/asound/card2/pcm1c/sub0/status: closed
+/proc/asound/card3/pcm0c/sub0/status: RUNNING, owner thread 7182, process voicesdk_server (pid 1872)
+
+# card0 device 2 (used by HamService)
+card: 0
+device: 2
+subdevice: 0
+stream: CAPTURE
+id: mad_pcm
+name: MStar MAD PCM CARD0 No.02
+access: RW_INTERLEAVED
+format: S16_LE
+subformat: STD
+channels: 2
+rate: 48000 (48000/1)
+period_size: 1200
+buffer_size: 4800

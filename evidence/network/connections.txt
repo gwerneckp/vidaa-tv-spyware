@@ -1,0 +1,16 @@
+# Internet connections held by system processes (netstat -tnp), TV idle on the home screen.
+# Local LAN address redacted. Connections of my own apps (torrent peers etc.) left out.
+
+tcp        0      0 <tv-lan-ip>:56286       43.157.127.133:10443    ESTABLISHED <pid>/phoenix (system service)
+tcp        0      0 <tv-lan-ip>:35126       44.219.84.69:8883       ESTABLISHED 3820/HamService
+tcp        0      0 <tv-lan-ip>:52450       34.252.28.38:443        ESTABLISHED 2071/netflix
+tcp        0      0 <tv-lan-ip>:46316       3.253.179.213:443       ESTABLISHED 5769/ignition
+tcp        0      0 <tv-lan-ip>:50616       18.245.162.54:443       ESTABLISHED 5769/ignition
+
+# Owners (whois), captured 2026-11-23 around 12:00:
+# 44.219.84.69     Amazon (AWS)       <- HamService, port 8883 = MQTT over TLS.
+#                                        Earlier the same day it was 44.216.60.52, also AWS.
+# 43.157.127.133   Aceville Pte. Ltd., Singapore   <- VIDAA system service (phoenix.server.js)
+# 34.252.28.38     Amazon (AWS)       <- Netflix, running in the background, not open on screen
+# 3.253.179.213, 18.245.162.54  Amazon (AWS)  <- Prime Video "ignition", background, not open
+# acr.unruly.co (HamService's default registration host) resolves to AWS addresses.

@@ -1,0 +1,24 @@
+# Packets to and from the ACR server, counted with temporary count-only iptables rules
+# (no ACCEPT/DROP target, so nothing was blocked). Rules removed afterwards.
+
+iptables -I OUTPUT 1 -d 44.216.60.52
+iptables -I INPUT  1 -s 44.216.60.52
+sleep 60
+
+ pkts bytes  target  prot  source        destination
+    0     0          all   0.0.0.0/0     44.216.60.52
+    0     0          all   44.216.60.52  0.0.0.0/0
+
+# Screen during the count: custom home screen, no sound playing.
+# HamService's audio capture (card0 device 2) stayed RUNNING throughout.
+
+# Second count, 2026-11-23 ~12:13, while a test video (Big Buck Bunny, archive.org) played full-screen.
+# Broker address at the time: 44.219.84.69 (AWS). 30 seconds.
+
+ pkts bytes  target  prot  source        destination
+   13  5692          all   0.0.0.0/0     <broker>
+   13  1118          all   <broker>      0.0.0.0/0
+
+# About 190 bytes/s out. The later TLS capture (evidence/capture/) shows why: one 399-byte
+# fingerprint message every ~2.7 s, i.e. ~11 per 30 s, plus TLS/TCP overhead.
+# The TV's saved answer after this test: {"isMatch":false,"genre":{"ACR_CAT1":"no_match","ACR_CAT2":"no_match"}}
