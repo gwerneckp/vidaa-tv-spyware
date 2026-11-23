@@ -1,11 +1,11 @@
 
-# What my Hisense TV does in the background
+# What my Hisense TV does in the background: it fingerprints the sound on every input, HDMI included
 
 ## How this started
 
 I bought this TV and got frustrated with it fast. I couldn't install Jellyfin, which is what I use to watch films I own. And the TV was bloated: the home screen had no way of reorganising apps, and it was full of ads and VIDAA promotions I didn't care about.
 
-Then I found [TODO: link to the repo that got me started] and started looking into how to fix that. I ended up rooting the TV. I did it by [TODO: method, e.g. "exploiting X in Y"]. A full write-up is here: [TODO: link]. If you have a VIDAA TV and you're interested in doing the same, I recommend reading that repo.
+Then I found [carteakey/alvidaa](https://github.com/carteakey/alvidaa) and started looking into how to fix that. I ended up rooting the TV. I did it by getting a file of my own onto the TV through the browser-facing `fetcher` action, which is a file write that needs no privileges, and then letting the superwatch daemon install it: its `postinst` runs as uid 0. Boot persistence is a vendor js-service, so nothing in the boot chain is modified. A full write-up is here: [55U65QEVS / V0000.09.60A.Q0602](https://github.com/carteakey/alvidaa/pull/82). If you have a VIDAA TV and you're interested in doing the same, I recommend reading that repo.
 
 I'd also recommend doing it with the help of an agentic AI model; I used DeepSeek. But make sure you understand what's happening at each step. Bricking your TV is always a risk with this kind of thing, and rooting it has warranty implications too.
 
