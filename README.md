@@ -1,6 +1,8 @@
 
 # What my Hisense TV does in the background: it fingerprints the sound on every input, HDMI included
 
+![How the TV fingerprints what you play: a console game's sound is sliced every quarter second into 72 frequency bands, turned into bits and sent to Nexxen with the TV's ID, the input and the time](evidence/figures/how-it-works.png)
+
 ## How this started
 
 I bought this TV and got frustrated with it fast. I couldn't install Jellyfin, which is what I use to watch films I own. And the TV was bloated: the home screen had no way of reorganising apps, and it was full of ads and VIDAA promotions I didn't care about.
