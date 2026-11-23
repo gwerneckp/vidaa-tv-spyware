@@ -28,6 +28,8 @@ Check again after a factory reset or a big update. The setup screens come back, 
 
 ### 2. Router DNS
 
+Ready-made blocklists in every common format, to subscribe to directly: [`lists/`](lists/).
+
 If you run a Pi-hole, AdGuard Home or NextDNS, block:
 
 ```

@@ -267,7 +267,7 @@ Anyone can do this with the remote. It doesn't remove anything, but it stops the
 2. **Settings → System → Advanced Settings.** Check that everything inside *Enhanced Viewing Settings* is off, then turn off *Personalised Ads* (and reset the ads ID) and *Personalised recommendations*.
 3. **Voice.** If you don't use it, turn off hands-free voice and Alexa, and use the mic switch on the TV if yours has one.
 4. **Apps.** Remove the app tiles you don't use from All apps. Most of them are just web shortcuts, so this only tidies the menu.
-5. **Your router.** If you have a Pi-hole, AdGuard Home or NextDNS, block `acr.unruly.co` and VIDAA's ad hosts. Then an update that quietly flips a setting back on still can't phone home.
+5. **Your router.** If you have a Pi-hole, AdGuard Home or NextDNS, block `acr.unruly.co` and VIDAA's ad hosts. Then an update that quietly flips a setting back on still can't phone home. Subscribable lists: [`lists/`](lists/).
 
 The screenshots for 1 and 2 are in [section 7](#7-where-the-off-switches-are-and-what-each-one-does).
 

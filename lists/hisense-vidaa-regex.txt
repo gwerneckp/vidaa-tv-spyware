@@ -1,0 +1,12 @@
+# Hisense VIDAA: ACR (Nexxen) and VIDAA ad/analytics hosts
+# Source: https://github.com/gwerneckp/vidaa-tv-spyware  (Pi-hole regex)
+# ACR hosts were seen on the network (TLS SNI + decrypted MQTT) on a Hisense 55U65QEVS, VIDAA U09.60, UK.
+# The stream hosts are numbered per connection (NN.fp.<country>.acr.unruly.co); exact-match lists can't
+# cover them all, so prefer the AdGuard or regex format, which block everything under acr.unruly.co.
+# The vidaahub.com hosts come from the firmware code. Do NOT block all of vidaahub.com: the app store,
+# updates and home screen use it.
+
+(^|\.)acr\.unruly\.co$
+^rsc-ads\.vidaahub\.com$
+^rsc-mntz\.vidaahub\.com$
+^abtest-tv\.vidaahub\.com$
